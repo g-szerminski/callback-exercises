@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		function dodaj(x, y) {
+			return x + y;
+		}
+		function odejmij(x, y) {
+			return x- y;
+		}
+		function calc(a, b, callback) {
+			console.log(`Wprowadzono wartości: ${a} i ${b}`);
+			return callback(a, b);
+		}
+		// calc(10, 20, dodaj);
+// -----------------------------------------------------------------------
+		function showConsole(x) {
+			console.log(x);
+		}
+		function showAlert(x) {
+			alert(x);
+		}
+		function show(a, callback) {
+			return callback(a);
+		}
+// -----------------------------------------------------------------------
+		//setInterval(function() {console.log('coś')}, 1000);
+		function drawCat() {
+			console.log('--^.^--');
+		};
+		//setInterval(drawCat, 1000);
+// ------------------------------------------------------------------------
+		function event() {
+			console.log('kliknąłeś');
+		}
+		document.addEventListener('click', event);
+// -------------------------------------------------------------------------
+		const wiek = [6, 10, 40, 4];
+		function odNajmniejszej(a, b) {
+			return a - b;
+		};
+		console.log(wiek.sort(odNajmniejszej));
+//-------------------------------------------------------------------------
+		const miasta = ['wrocław', 'kraków', 'warszawa', 'poznań'];
+		function upper(city) {
+			return city.toUpperCase();
+		} 
+		const miastaUpper = miasta.map(upper);
+		console.log(miastaUpper);
+
+	</script>
+</body>
+</html>
+
+<!-- const arr = ['a', 'b', 'c'];
+		// arr[arr.length] = 'nowy';
+		 arr[arr.length + 3] = 'nowy 2';
+		//arr[arr.length - 1]; -->
